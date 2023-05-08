@@ -32,11 +32,6 @@ body {
 }
 
 
-.nav_wrapper {
-    max-width: 90dvw;
-    margin: 0 auto;
-}
-
 .inner_wrapper {
     max-width: 95dvw;
     margin: 0 auto;
@@ -45,39 +40,28 @@ body {
 
 
 header {
+    padding: .25em;
     display: flex;
-    justify-content: center;
-    align-content: center;
+    justify-content: space-around;
     align-items: center;
-    height: fit-content;
-    padding: 2vh 6vw;
-    margin: 0 auto;
-    font-family: 'Roboto';
     font-size: var(--header-font-size);
-    text-transform: uppercase;
     color: #213546;
-    gap: 40px;
 }
 
 .logo {
     width: fit-content;
     height: fit-content;
-    min-width: 180px;
-    min-height: 120px;
-    max-width: 60dvw;
-    max-height: 200px;
+    flex-grow: 1;
+    flex-shrink: 0;
     margin: 0;
     padding: 0;
     cursor: pointer;
 }
 
-
-
 header nav {
     display: none;
-    flex-wrap: wrap;
     top: 0;
-    padding: 1em;
+    padding: 0;
     position: fixed;
     height: fit-content;
     z-index: 10000;
@@ -86,8 +70,8 @@ header nav {
 }
 
 .hamburger {
-    max-height: calc(150px * 0.5);
-    max-width: calc(300px * 2);
+    min-width: 30%;
+    flex-shrink: 1;
     margin: 0 auto;
     cursor: pointer;
 }
@@ -98,7 +82,7 @@ header nav {
 
 
 header ul {
-    padding: 0;
+    padding: 0 1em;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -120,6 +104,72 @@ header ul li a {
 header ul li a:hover {
     color: var(--orange);
     text-decoration: underline;
+}
+
+@media screen and (min-width: 800px) {
+    .nav_wrapper {
+        max-width: 90vw;
+    }
+
+    header {
+        margin-bottom: 4dvh;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    header nav {
+        all: unset;
+        position: unset;
+        min-width: 51dvw;
+        margin: 1em 0;
+        background-color: var(--grey);
+        display: inline-block !important;
+    }
+
+    header nav ul {
+        justify-content: end;
+        display: flex;
+        flex-direction: row;
+        gap: 0 50px;
+        max-width: 50dvw;
+    }
+
+    header nav ul li a {
+        color: var(--darkpurple);
+    }
+
+    nav svg {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    header {
+        flex-wrap: nowrap;
+        margin: 0;
+        padding: 0;
+        max-height: 15vh;
+    }
+
+    header nav ul {
+        margin: 0;
+        flex-wrap: nowrap;
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+        justify-content: end;
+    }
+
+    header nav ul li a {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        max-width: 220px;
+    }
 }
 
 .hero {
@@ -177,40 +227,8 @@ header ul li a:hover {
     bottom: 0;
 }
 
+
 @media screen and (min-width: 800px) {
-    .nav_wrapper {
-        max-width: 90vw;
-    }
-
-    header {
-        margin-bottom: 4dvh;
-    }
-
-    .hamburger {
-        display: none;
-    }
-
-    header nav {
-        all: unset;
-        position: unset;
-        min-width: 51dvw;
-        margin: 1em 0;
-        background-color: var(--grey);
-        display: inline-block !important;
-    }
-
-    header nav ul {
-        justify-content: end;
-        display: flex;
-        flex-direction: row;
-        gap: 0 50px;
-        max-width: 50dvw;
-    }
-
-    header nav ul li a {
-        color: var(--darkpurple);
-    }
-
     .hero {
         min-height: 60dvh;
         max-height: 100dvh;
@@ -237,30 +255,6 @@ header ul li a:hover {
 }
 
 @media screen and (min-width: 1000px) {
-
-    header {
-        flex-wrap: nowrap;
-        margin: 0;
-        padding: 0;
-        max-height: 15vh;
-    }
-
-    header nav ul {
-        margin: 0;
-        flex-wrap: nowrap;
-        align-items: center;
-        flex-direction: row;
-        display: flex;
-        justify-content: end;
-    }
-
-    header nav ul li a {
-        padding: 10px 15px;
-    }
-
-    .logo {
-        max-width: 220px;
-    }
 
     .hero {
         flex-direction: row-reverse;

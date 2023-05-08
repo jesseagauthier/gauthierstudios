@@ -52,7 +52,7 @@ class Header extends HTMLElement {
             </g>
         </svg>
         <!-- Hamburger menu icon - click to open nav on mobile/tablet -->
-        <svg class="hamburger icon flat-line" fill="" width="100%" height="100%"
+        <svg class="hamburger icon flat-line" fill="" width="100" height="100"
             viewBox="-2.4 -2.4 28.80 28.80" id="navopen" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg"
             stroke="" transform="matrix(-1, 0, 0, -1, 0, 0)rotate(0)">
             <g class="no-animate" id="SVGRepo_bgCarrier" stroke-width="0" />
@@ -65,7 +65,7 @@ class Header extends HTMLElement {
         </svg>
         <!-- Main navigation - hidden on mobile/tablet unless hamburger is clicked -->
         <nav class="">
-            <svg class="no-animate hamburger icon flat-line" style="display: none" fill="" width="100%" height="100%"
+            <svg class="no-animate hamburger icon flat-line" style="display: none" fill="" width="100" height="100"
                 viewBox="-2.4 -2.4 28.80 28.80" id="navclose" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg"
                 stroke="" transform="matrix(-1, 0, 0, -1, 0, 0)rotate(0)">
                 <g class="no-animate" id="SVGRepo_bgCarrier" stroke-width="0" />
