@@ -373,6 +373,7 @@ header ul li a:hover {
 }
 
 .flex-col {
+    padding: 1em;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -447,12 +448,7 @@ header ul li a:hover {
 footer,
 .footer-component {
     padding: 3em 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    min-height: 30dvh;
+    text-align: center;
     background: url(/assets/polygon-scatter-haikei.svg);
     background-color: var(--darkpurple);
     background-size: cover;
