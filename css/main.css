@@ -447,7 +447,7 @@ header ul li a:hover {
 
 footer,
 .footer-component {
-    padding: 3em 1em;
+    padding: 1em;
     text-align: center;
     background: url(/assets/polygon-scatter-haikei.svg);
     background-color: var(--darkpurple);
@@ -855,6 +855,7 @@ Animation System by Neale Van Fleet from Rogue Amoeba
     animation-delay: 3.5s;
 }
 
+/* Add to remove animations from any element */
 .no-animate {
     animation-duration: 0s !important;
     -webkit-animation-duration: 0s !important;
@@ -867,6 +868,10 @@ Animation System by Neale Van Fleet from Rogue Amoeba
         animation: none !important;
     }
 }
+
+
+/* Contact Button  */
+
 
 .contact_form {
     padding: 2em 0 4em 0;
