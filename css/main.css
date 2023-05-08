@@ -299,14 +299,14 @@ header ul li a:hover {
     justify-content: center;
     align-items: center;
     min-height: 80vh;
-    padding: 1em;
+    padding: 1.5em 1em;
     background-color: #161B32;
 }
 
 .portfolio h2 {
     color: white;
     text-transform: uppercase;
-    /* letter-spacing: 30px; */
+    letter-spacing: 15px;
     font-size: var(--xlheading-content-font-size);
     text-align: center;
 }
@@ -315,7 +315,7 @@ header ul li a:hover {
     padding: 1em;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 2em 0;
 }
 
@@ -336,7 +336,7 @@ header ul li a:hover {
 @media screen and (min-width: 900px) {
 
     .portfolio_item {
-        max-width: 33%;
+        max-width: 28%;
         flex-shrink: 1;
         flex-grow: 0;
     }
@@ -442,14 +442,6 @@ header ul li a:hover {
 
 
 }
-
-
-
-
-
-
-
-
 
 
 footer,
@@ -882,4 +874,27 @@ Animation System by Neale Van Fleet from Rogue Amoeba
 
 .contact_form {
     padding: 2em 0 4em 0;
+}
+
+.calendly-badge-widget {
+    width: fit-content;
+    height: fit-content;
+}
+
+.calendly-badge-content {
+    height: fit-content;
+    padding: 10px !important;
+    border-radius: 40px !important;
+    background-color: #BA7E14 !important;
+    width: fit-content;
+}
+
+.calendar {
+    padding: 0;
+    height: 60px;
+    width: 60px;
+}
+
+.calendly-badge-content:hover {
+    background-color: var(--purple) !important;
 }
