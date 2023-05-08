@@ -181,8 +181,6 @@ header ul li a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
-    padding-bottom: 25vh;
-    ;
 }
 
 .hero div {
@@ -224,14 +222,13 @@ header ul li a:hover {
     order: 2;
     position: relative;
     display: inline;
-    bottom: 0;
+    bottom: 74px;
 }
 
 
 @media screen and (min-width: 800px) {
     .hero {
-        min-height: 60dvh;
-        max-height: 100dvh;
+        height: 100vh;
     }
 
     .hero div {
@@ -284,6 +281,11 @@ header ul li a:hover {
         text-align: center;
         width: 100%;
         margin-top: .10em;
+    }
+
+    .sitting_hero {
+        bottom: -15vh;
+        left: -4vw;
     }
 }
 
