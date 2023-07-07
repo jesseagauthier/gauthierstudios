@@ -20,6 +20,7 @@
 html {
     scroll-behavior: smooth;
     height: 100%;
+    box-sizing: border-box;
 }
 
 body {
@@ -895,4 +896,49 @@ Animation System by Neale Van Fleet from Rogue Amoeba
 
 .calendly-badge-content:hover {
     background-color: var(--purple) !important;
+}
+
+
+/* Form container */
+form {
+    padding: 2em 1em;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-size: var(--heading-content-font-size);
+    margin-bottom: 10px;
+}
+
+/* Inputs and Textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+    all: unset;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 2px;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Submit button */
+input[type="submit"] {
+    display: block;
+    min-width: 200px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--darkpurple);
 }
