@@ -1,14 +1,10 @@
-class Header extends HTMLElement {
-    constructor() {
-        super();
-    }
+const header = document.getElementById('headerBox');
 
-    connectedCallback() {
-        this.innerHTML = `
-          <header class="inner_wrapper no-animate">
-        <!-- Skiplinks for accessibility -->
-        <!-- SVG code for Logo -->
-        <svg id="b" class="logo" viewBox="0 0 157.96 40.22">
+header.insertAdjacentHTML('beforeend', `
+    <div class="header__container">
+    <div class="header__logo">
+        <a href="index.html">
+            <svg id="b" class="logo" viewBox="0 0 157.96 40.22">
             <defs>
                 <style>
                     .d {
@@ -51,39 +47,26 @@ class Header extends HTMLElement {
                     d="m126.2,39.77c-.7-.3-1.25-.73-1.66-1.29-.41-.56-.62-1.23-.63-1.99h2.69c.04.52.22.92.55,1.22.33.3.78.45,1.36.45s1.05-.14,1.38-.42c.34-.28.5-.65.5-1.1,0-.37-.11-.68-.34-.92-.23-.24-.51-.43-.85-.57-.34-.14-.81-.29-1.41-.46-.81-.24-1.48-.48-1.98-.71-.51-.23-.95-.59-1.31-1.06-.37-.47-.55-1.1-.55-1.89,0-.74.19-1.39.56-1.94.37-.55.89-.97,1.56-1.27.67-.29,1.44-.44,2.3-.44,1.29,0,2.34.31,3.15.94.81.63,1.25,1.51,1.34,2.63h-2.77c-.02-.43-.21-.79-.55-1.07s-.79-.42-1.36-.42c-.49,0-.88.13-1.18.38-.29.25-.44.62-.44,1.1,0,.34.11.61.33.84.22.22.5.4.83.54.33.14.79.3,1.39.48.81.24,1.48.48,1.99.72.52.24.96.6,1.33,1.08.37.48.56,1.11.56,1.89,0,.67-.17,1.29-.52,1.87-.35.57-.86,1.03-1.53,1.37-.67.34-1.47.51-2.39.51-.87,0-1.66-.15-2.36-.45Z" />
             </g>
         </svg>
-        <!-- Hamburger menu icon - click to open nav on mobile/tablet -->
-        <svg class="hamburger icon flat-line" fill="" width="100" height="100"
-            viewBox="-2.4 -2.4 28.80 28.80" id="navopen" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg"
-            stroke="" transform="matrix(-1, 0, 0, -1, 0, 0)rotate(0)">
-            <g class="no-animate" id="SVGRepo_bgCarrier" stroke-width="0" />
-            <g  class="no-animate" id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-            <g  class="no-animate" id="SVGRepo_iconCarrier">
-                <path  class="no-animate" id="secondary" d="M10,10H3V3h7Zm11,4H14v7h7Z" style="fill: #BA7E14; stroke-width: 2;" />
-                <path  class="no-animate" id="primary" d="M21,3H14v7h7ZM10,14H3v7h7Zm0-4H3V3h7Zm11,4H14v7h7Z"
-                    style="fill: none; stroke: #000000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;" />
-            </g>
+        </a>
+    </div>
+    <div id="menuMobile"  class="header__menu navtoggler">
+        <ul class="header__menu-list">
+            <li class="header__menu-item">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="header__menu-item">
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+        <svg id="closeNav" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18L18 6M6 6l12 12" />
         </svg>
-        <!-- Main navigation - hidden on mobile/tablet unless hamburger is clicked -->
-        <nav class="">
-            <svg class="no-animate hamburger icon flat-line" style="display: none" fill="" width="100" height="100"
-                viewBox="-2.4 -2.4 28.80 28.80" id="navclose" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg"
-                stroke="" transform="matrix(-1, 0, 0, -1, 0, 0)rotate(0)">
-                <g class="no-animate" id="SVGRepo_bgCarrier" stroke-width="0" />
-                <g class="no-animate" id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
-                <g class="no-animate" id="SVGRepo_iconCarrier">
-                    <path  class="no-animate"  id="secondary" d="M10,10H3V3h7Zm11,4H14v7h7Z" style="fill: #BA7E14; stroke-width: 2;" />
-                    <path  class="no-animate"  id="primary" d="M21,3H14v7h7ZM10,14H3v7h7Zm0-4H3V3h7Zm11,4H14v7h7Z"
-                        style="fill: none; stroke: #d7d1d1; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1;" />
-                </g>
-            </svg>
-            <ul class="no-animate"  id="nav-menu">
-                <li class="" ><a href="index.html" class="" aria-current="page">Home</a></li>
-                <li class="" ><a href="contact.html" class="">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    `;
-    }
-}
+    </div>
+    <svg id="navtoggle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+    </svg>
+</div>
 
-customElements.define('header-component', Header);
+`);
